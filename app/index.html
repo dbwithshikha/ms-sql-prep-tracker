@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Learning Tracker | MS SQL Server</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+        <div class="hero-content">
+            <h1>Welcome, Deepshikha!</h1>
+            <p>Your DevOps Learning Companion</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Categories</h2>
+                <button class="toggle-sidebar" id="toggleSidebar" aria-label="Toggle sidebar">☰</button>
+            </div>
+            
+            <nav class="category-nav" id="categoryNav">
+                <!-- Categories will be dynamically loaded here -->
+            </nav>
+
+            <div class="sidebar-divider"></div>
+
+            <!-- Action Buttons -->
+            <div class="actions">
+                <h3>Actions</h3>
+                <button class="action-btn" id="importBtn" title="Import custom learning path">
+                    <span class="icon">📥</span> Import
+                </button>
+                <button class="action-btn" id="exportBtn" title="Export progress as JSON">
+                    <span class="icon">📤</span> Export
+                </button>
+                <button class="action-btn" id="resetBtn" title="Reset all progress">
+                    <span class="icon">🔄</span> Reset
+                </button>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <label for="themeToggle">
+                    <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+                    <span>Dark Mode</span>
+                </label>
+            </div>
+
+            <!-- Progress Stats -->
+            <div class="progress-stats">
+                <h3>Progress</h3>
+                <div class="stat">
+                    <span class="stat-label">Completed:</span>
+                    <span class="stat-value" id="completedCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Total:</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-percentage" id="progressPercentage">0%</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="categoryTitle">MS SQL Server</h1>
+                <p id="categoryDescription" class="category-description"></p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar with Topics Grid -->
+        <aside class="sidebar-right">
+            <!-- Topics Container Grid -->
+            <div class="topics-container" id="topicsContainer">
+                <!-- Topics will be dynamically loaded here in grid format -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="fileInput" accept=".json" style="display: none;">
+
+    <script src="app.js"></script>
+</body>
+</html>
